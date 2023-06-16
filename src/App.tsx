@@ -136,6 +136,31 @@ function App() {
     age: 16,
     theme: "dark",
   };
+
+  // Interfaces
+  interface IUser {
+    username: string;
+    email: string;
+    age: number;
+  }
+  // 확장 가능
+  interface IEmployee extends IUser {
+    employeeId: number;
+  }
+
+  const emp: IEmployee = {
+    username: "tome",
+    email: "hello@hello.com",
+    age: 44,
+    employeeId: 1,
+  };
+
+  const client: IUser = {
+    username: "tome",
+    email: "hello@hello.com",
+    age: 44,
+  };
+
   return <>hello</>;
 }
 
