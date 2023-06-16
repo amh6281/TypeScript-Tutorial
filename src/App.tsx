@@ -80,6 +80,35 @@ function App() {
   let testAnyArray: any[];
   testAnyArray = [1, "two", false, []];
 
+  let sayHi = () => {
+    console.log("hi");
+  };
+
+  let funcReturnString = (): string => {
+    console.log("hi");
+    return "hi";
+  };
+
+  let multiple = (num: number): number => {
+    return num * 2;
+  };
+  let multiple2 = (num: number) => {
+    return num * 2;
+  };
+  let multiple3 = (num: number): void => {
+    // return num * 2;
+    // don't return
+  };
+
+  let sum = (num1: number, num2: number) => {
+    return num1 + num2;
+  };
+  sum(2, 3);
+
+  let func = (user: { username: string; age: number; phone?: string }) => {
+    console.log(user.username);
+  };
+
   return <>hello</>;
 }
 
