@@ -97,7 +97,7 @@ function App() {
   };
   let multiple3 = (num: number): void => {
     // return num * 2;
-    // don't return
+    // void는 아무것도 반환하지 않는 함수의 타입
   };
 
   let sum = (num1: number, num2: number) => {
@@ -105,10 +105,37 @@ function App() {
   };
   sum(2, 3);
 
+  // 너무 길다! = type aliases
   let func = (user: { username: string; age: number; phone?: string }) => {
     console.log(user.username);
   };
 
+  // Type aliases
+  type UserType = {
+    username: string;
+    age: number;
+    phone?: string;
+  };
+  let betterFunc = (user: UserType) => {
+    console.log(user.username);
+  };
+
+  type myFunc = (a: number, b: string) => void;
+  let write: myFunc = (num, str) => {
+    console.log(num + "time" + str);
+  };
+
+  type UserType2 = {
+    username: string;
+    age: number;
+    phone?: string;
+    theme: "dark" | "light";
+  };
+  const userWithTheme: UserType2 = {
+    username: "jone",
+    age: 16,
+    theme: "dark",
+  };
   return <>hello</>;
 }
 
