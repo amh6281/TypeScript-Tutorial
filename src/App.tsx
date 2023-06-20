@@ -1,4 +1,5 @@
 import Event from "./components/Event";
+import ItemList from "./components/Generic/ItemList";
 import PostList from "./components/PostList/PostList";
 import UseContext from "./components/UseContext";
 import UseRef from "./components/UseRef";
@@ -10,7 +11,8 @@ function App() {
       {/* <Event /> */}
       {/* <UseState /> */}
       {/* <UseContext /> */}
-      <UseRef />
+      {/* <UseRef /> */}
+      <ItemList />
     </div>
   );
 }
